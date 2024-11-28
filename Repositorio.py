@@ -1,25 +1,34 @@
 #leitura da quantidade de alunos (INT)
-Quantidade_alunos = int(input("digite a quantidade de alunos:"))
+quantidade_aluno= int(input("digite a quantidade de alunos:"))
 #leitura do nome do aluno (string)
 Nome = input("digite o nome do aluno:")
 #leitura das 4 notas do aluno (FLOAT)
-Notas = float(input("digite a nota [i+1] do aluno:"))
+Nota1 = float(input("digite a nota do aluno:"))
+Nota2= float(input("digite a nota do aluno:"))
+Nota3 = float(input("digite a nota do aluno:"))
+Nota4 = float(input("digite a nota do aluno:"))
 #leitura da quantidade de faltas do aluno (INT)
-Quantidade_faltas = int(input("digite a quantidade de faltas do aluno:"))
+faltas = int(input("digite a quantidade de faltas do aluno:"))
 
-Mediadoaluno =(Notas+Notas+Notas+Notas)/4
+Mediadoaluno =(Nota1+Nota2+Nota3+Nota4)/4
 
-while True:
     #Solicita os dados do aluno
+if faltas <= 31:
     Mediadoaluno = float(input("digite a media do aluno:"))
-    Quantidade_faltas = int(input("digite o numero de faltas do aluno:"))
-
     #verifica os criterio de aprovação/reprovação
-    if Quantidade_faltas > 31:
-        print("Reprovado por faltas")
-    elif Mediadoaluno >= 8:
+elif faltas >= 31:
+    situacao = 'reprovado'
+    
+elif Mediadoaluno >= 8:
         print("aprovado")
-    elif Mediadoaluno >= 5:
-        print("recuperação")
-    else:
-        print("reprovado por nota")
+    
+elif Mediadoaluno >= 5:
+    print("recuperação")
+    recuperacao = float(input())
+    if Mediadoaluno + recuperacao >=8:
+        Mediadoaluno = Mediadoaluno + recuperacao
+        print("aprovado")    
+else:
+    print("reprovado")
+
+print("o aluno está",situacao)
