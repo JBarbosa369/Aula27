@@ -28,8 +28,9 @@ elif Mediadoaluno >= 5:
         situacao = "aprovado"  
 else:
     situacao = "reprovado"
+# imprimindo o resulta na tel
+print("o aluno:",Nome,"foi",situacao,"com a media",Mediadoaluno,"com",faltas,"faltas")
 
-print("o aluno",Nome,"foi",situacao,"com a media",Mediadoaluno,"com",faltas,"faltas")
 
 
 
