@@ -13,22 +13,23 @@ faltas = int(input("digite a quantidade de faltas do aluno:"))
 Mediadoaluno =(Nota1+Nota2+Nota3+Nota4)/4
 
     #Solicita os dados do aluno
-if faltas <= 31:
-    Mediadoaluno = float(input("digite a media do aluno:"))
+if faltas >= 31:
+    situacao = "reprovado por faltas"
     #verifica os criterio de aprovação/reprovação
 elif faltas >= 31:
-    situacao = 'reprovado'
-    
+    situacao = "reprovado"   
 elif Mediadoaluno >= 8:
-        print("aprovado")
-    
+     situacao = "aprovado"
 elif Mediadoaluno >= 5:
-    print("recuperação")
+    situacao = "recuperacao"
     recuperacao = float(input())
     if Mediadoaluno + recuperacao >=8:
         Mediadoaluno = Mediadoaluno + recuperacao
-        print("aprovado")    
+        situacao = "aprovado"  
 else:
-    print("reprovado")
+    situacao = "reprovado"
 
-print("o aluno está",situacao)
+print("o aluno",Nome,"foi",situacao,"com a media",Mediadoaluno,"com",faltas,"faltas")
+
+
+
