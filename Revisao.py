@@ -1,4 +1,6 @@
 #Ler entradas do usuario.
+#o codigo lendo varios alunos e a mesma coisa
+#a unica diferença é que ele está dentro de uma repetição 
 cont = 0 #variavel que controla a repetição.
 escolha_usuario = int (input())#variavel que guarda quantas vezes o codigo vai rodar.
 while cont < escolha_usuario:
@@ -32,3 +34,4 @@ while cont < escolha_usuario:
     print("faltas:",faltas)
     print("media:",Media)
     print("Situacao:",situacao)
+    cont = cont +1
