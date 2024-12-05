@@ -3,7 +3,7 @@
 #a unica diferença é que ele está dentro de uma repetição 
  #variavel que controla a repetição.
 Menu = int (input()) # variavel que guarda qual escolha do usuario.
-Aluno =[]#lista que guardará todos os dados dos alunos cadastrado.
+Aluno = []#lista que guardará todos os dados dos alunos cadastrado.
 if Menu == 1:
     situacao = ""
 
@@ -39,12 +39,13 @@ if Menu == 1:
 #enviar os dados do aluno para a lista alunos
     Aluno.append([nome,faltas,Media,situacao])
     cont = cont +1
-    #Relatorio.
+    
+elif Menu == 2:    #Relatorio.
     print("nome:",nome)
     print("notas:",Nota1,Nota2,Nota3,Nota4)
     print("faltas:",faltas)
     print("media:",Media)
     print("Situacao:",situacao)
     cont = cont +1
-print(Aluno)
+    print(Aluno)
    
