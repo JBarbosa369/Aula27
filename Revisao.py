@@ -2,7 +2,7 @@
 #o codigo lendo varios alunos e a mesma coisa
 #a unica diferença é que ele está dentro de uma repetição 
  #variavel que controla a repetição.
-Aluno = []#lista que guardará todos os dados dos alunos cadastrado.
+Alunos = []#lista que guardará todos os dados dos alunos cadastrado.
 while True:
     Menu = int (input()) # variavel que guarda qual escolha do usuario.
     
@@ -39,9 +39,17 @@ while True:
                 situacao = "Reprovado por media"
             cont = cont +1
     #enviar os dados do aluno para a lista alunos
-            Aluno.append([nome,faltas,Media,situacao])
+            Alunos.append([nome,faltas,Media,situacao])
        
         
-    elif Menu == 2:    #Relatorio.
-        print(Aluno)
+    elif Menu == 2:#Relatorio.
+     Alunos.append([nome,faltas,Media,situacao])
+     cont =+ 1
+     print(Alunos)
+
+    elif Menu == 3: # se o usuario escolher encerrar.
+        break # quebra a execução do enquanto.
+
+
+
    
