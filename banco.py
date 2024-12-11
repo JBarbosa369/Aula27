@@ -14,7 +14,7 @@ while True:
         senha = input("crie uma senha:")
     elif menu == 2:
         #comparar as inf,cadastradas com uma leitura 
-        login_usuario = input("digite seu usuario:")jhgyugjugj
+        login_usuario = input("digite seu usuario:")
         login_senha = input("digite sua senha:")
         if login_usuario == usuario and login_senha == senha:
             print("Login realizado com sucesso")
